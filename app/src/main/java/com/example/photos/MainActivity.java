@@ -87,7 +87,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
                 super.onScrolled(recyclerView, dx, dy);
 
-                if (!isFilterApplied) {
+                //Checking if isFilterApplied is true or not
+                //Also checking if the total item count in the adapter is < 30 or not.
+                //If it is not then further operations are carried out else they are ignored(As per assignment instructions)
+                if (!isFilterApplied && adapter.getItemCount() < 30) {
                     if (dy > 0) {//check for scroll down
 
                         int visibleItemCount = layoutManager.getChildCount();
