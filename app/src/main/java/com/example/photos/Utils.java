@@ -16,7 +16,7 @@ import android.view.inputmethod.InputMethodManager;
 public class Utils {
 
     /**
-     * Method to open the keyboard
+     * Method to close the keyboard
      * @param activity
      */
     public static void hideKeyboard(Activity activity) {
